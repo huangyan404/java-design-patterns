@@ -12,7 +12,7 @@ tags:
 ## Intent
 
 Use dynamic properties and achieve flexibility of untyped languages while keeping type-safety.
-> **使用动态属性并实现无类型语言的灵活性，同时保持类型安全。**
+> **使用动态属性并实现无类型语言的灵活性，同时保持类型安全。测试提交**
 
 ## Explanation
 
