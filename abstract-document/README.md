@@ -11,17 +11,20 @@ tags:
 
 ## Intent
 
-Use dynamic properties and achieve flexibility of untyped languages while keeping type-safety. 
+Use dynamic properties and achieve flexibility of untyped languages while keeping type-safety.
+> **使用动态属性并实现无类型语言的灵活性，同时保持类型安全。**
 
 ## Explanation
 
 The Abstract Document pattern enables handling additional, non-static properties. This pattern
 uses concept of traits to enable type safety and separate properties of different classes into
 set of interfaces.
+> **抽象文档模式可以处理额外的非静态属性。此模式使用特征概念来实现类型安全并将不同类的属性分离到一组接口中。**
 
 Real world example
 
 >  Consider a car that consists of multiple parts. However we don't know if the specific car really has all the parts, or just some of them. Our cars are dynamic and extremely flexible.
+>  **抽象文档模式允许在对象不知道的情况下将属性附加到对象。**
 
 In plain words
 
@@ -34,6 +37,8 @@ the data using typed views. The purpose of the pattern is to achieve a high degr
 in a strongly typed language where new properties can be added to the object-tree on the fly, without losing the 
 support of type-safety. The pattern makes use of traits to separate different properties of a class into different 
 interfaces.
+
+> **一种面向对象的结构设计模式，用于在松散类型的键值存储中组织对象并使用类型化视图公开数据。该模式的目的是在强类型语言中实现组件之间的高度灵活性，其中可以动态地将新属性添加到对象树中，而不会失去对类型安全的支持。该模式利用特征将类的不同属性分离到不同的接口中。**
 
 **Programmatic Example**
 
@@ -181,8 +186,13 @@ And finally here's how we construct and use the `Car` in a full example.
 Use the Abstract Document Pattern when
 
 * There is a need to add new properties on the fly
+* 需要动态添加新属性
+
 * You want a flexible way to organize domain in tree like structure
+* 您需要一种灵活的方式来以树状结构组织域
+
 * You want more loosely coupled system
+* 你想要更松耦合的系统
 
 ## Credits
 

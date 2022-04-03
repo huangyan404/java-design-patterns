@@ -11,23 +11,24 @@ tags:
 
 ## Intent
 
-Domain model pattern provides an object-oriented way of dealing with complicated logic. Instead of having one procedure that handles all business logic for a user action there are multiple objects and each of them handles a slice of domain logic that is relevant to it.
+> 领域模型模式提供了一种处理复杂逻辑的面向对象的方式。不是有一个过程来处理用户操作的所有业务逻辑，而是有多个对象，每个对象都处理与其相关的领域逻辑片。
 
 ## Explanation
 
 Real world example
 
-> Let's assume that we need to build an e-commerce web application. While analyzing requirements you will notice that there are few nouns you talk about repeatedly. It’s your Customer, and a Product the customer looks for. These two are your domain-specific classes and each of that classes will include some business logic specific to its domain.
+> 假设我们需要构建一个电子商务 Web 应用程序。在分析需求时，您会注意到您重复谈论的名词很少。这是您的客户，也是客户寻找的产品。这两个是特定于域的类，每个类都将包含一些特定于其域的业务逻辑。
 
 In plain words
 
-> The Domain Model is an object model of the domain that incorporates both behavior and data.
+> 域模型是结合了行为和数据的域的对象模型。
 
 Programmatic Example
 
-In the example of the e-commerce app, we need to deal with the domain logic of customers who want to buy products and return them if they want. We can use the domain model pattern and create classes `Customer` and `Product` where every single instance of that class incorporates both behavior and data and represents only one record in the underlying table.
-
-Here is the `Product` domain class with fields `name`, `price`, `expirationDate` which is specific for each product, `productDao` for working with DB, `save` method for saving product and `getSalePrice` method which return price for this product with discount.
+在电子商务应用程序的示例中，我们需要处理客户想要购买产品并根据需要退货的领域逻辑。
+我们可以使用域模型模式并创建类“客户”和“产品”，其中该类的每个实例都包含行为和数据，
+并且仅表示基础表中的一条记录。这里是 `Product` 域类，包含字段 `name`、`price`、`expirationDate`，
+每个产品都是特定的，`productDao` 用于使用 DB，`save` 方法用于保存产品，`getSalePrice` 方法返回此产品的折扣价。
 
 ```java
 @Slf4j
@@ -80,7 +81,9 @@ public class Product {
 }
 ```
 
-Here is the `Customer` domain class with fields `name`, `money` which is specific for each customer, `customerDao` for working with DB, `save` for saving customer, `buyProduct` which add a product to purchases and withdraw money, `returnProduct` which remove product from purchases and return money, `showPurchases` and `showBalance` methods for printing customer's purchases and money balance.
+这里是 `Customer` 域类，其中包含字段 `name`、`money` 字段是特定于每个客户的、`customerDao` 用于与 DB 合作、`save` 用于保存客户、
+`buyProduct` 用于将产品添加到购买和退出money，从购买中删除产品并退货的`returnProduct`，
+用于打印客户购买和货币余额的`showPurchases`和`showBalance`方法。
 
 ```java
 @Slf4j
@@ -196,7 +199,7 @@ public class Customer {
 }
 ```
 
-In the class `App`, we create a new instance of class Customer which represents customer Tom and handle data and actions of that customer and creating three products that Tom wants to buy.
+在“App”类中，我们创建了代表客户 Tom 的 Customer 类的新实例，并处理该客户的数据和操作，并创建 Tom 想要购买的三种产品。
 
 
 ```java
@@ -309,7 +312,8 @@ The program output:
 
 ## Applicability
 
-Use a Domain model pattern when your domain logic is complex and that complexity can rapidly grow because this pattern handles increasing complexity very well. Otherwise, it's a more complex solution for organizing domain logic, so shouldn't use Domain Model pattern for systems with simple domain logic, because the cost of understanding it and complexity of data source exceeds the benefit of this pattern.
+当您的域逻辑很复杂并且复杂性会迅速增长时，请使用域模型模式，因为这种模式可以很好地处理不断增加的复杂性。
+否则，它是组织领域逻辑的更复杂的解决方案，因此不应将领域模型模式用于具有简单领域逻辑的系统，因为理解它的成本和数据源的复杂性超过了这种模式的好处。
 
 ## Related patterns
 
