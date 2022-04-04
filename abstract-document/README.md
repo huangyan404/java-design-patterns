@@ -24,7 +24,7 @@ set of interfaces.
 Real world example
 
 >  Consider a car that consists of multiple parts. However we don't know if the specific car really has all the parts, or just some of them. Our cars are dynamic and extremely flexible.
->  **抽象文档模式允许在对象不知道的情况下将属性附加到对象。**
+>  **抽象文档模式允许在对象不知道的情况下将属性附加到对象。测试，无vpn提交**
 
 In plain words
 
